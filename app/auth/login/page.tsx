@@ -125,12 +125,7 @@ export default function LoginPage() {
             </div>
 
             {/* Credenciales de prueba */}
-            <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded">
-              <p className="text-blue-800 text-sm font-semibold mb-2">Credenciales de prueba:</p>
-              <p className="text-blue-700 text-xs">
-                <strong>Admin:</strong> admin@todoaqui.com / password
-              </p>
-            </div>
+            
           </CardContent>
         </Card>
       </div>
