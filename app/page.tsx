@@ -5,6 +5,7 @@ import { ShoppingBag, Home, GraduationCap, Briefcase, Coffee, Watch } from "luci
 import Navbar from "@/components/Navbar"
 import SearchBar from "@/components/SearchBar"
 import ProductCard from "@/components/ProductCard"
+import AdminWhatsAppContact from "@/components/AdminWhatsAppContact"
 import { Button } from "@/components/ui/button"
 import type { Product } from "@/lib/database"
 
@@ -236,6 +237,7 @@ export default function HomePage() {
             <span className="text-xl font-bold text-orange-900">Todo Aquí</span>
           </div>
           <p className="text-orange-700">Tu tienda virtual de confianza - Conectando vendedores y compradores</p>
+          <AdminWhatsAppContact />
         </div>
       </footer>
     </div>

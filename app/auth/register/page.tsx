@@ -99,6 +99,7 @@ export default function RegisterPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 to-peach-50 flex items-center justify-center p-4">
       <div className="w-full max-w-md">
+        <h1 className="sr-only">Registrarse en Todo Aquí</h1>
         {/* Logo */}
         <div className="text-center mb-8">
           <Link href="/" className="inline-flex items-center space-x-2">
