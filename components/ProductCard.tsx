@@ -16,7 +16,9 @@ interface ProductCardProps {
 
 export default function ProductCard({ product, showActions = false, onEdit, onDelete }: ProductCardProps) {
   const handleWhatsAppContact = () => {
-    const message = encodeURIComponent(`Hola! Me interesa el producto: ${product.nombre} - $${product.precio}`)
+    const message = encodeURIComponent(
+      `Hola! Me interesa el producto: ${product.nombre} - $${product.precio}. Vengo de Todo Aquí.`,
+    )
     const whatsappUrl = `https://wa.me/${product.vendedor_whatsapp}?text=${message}`
     window.open(whatsappUrl, "_blank")
   }
