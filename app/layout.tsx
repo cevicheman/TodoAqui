@@ -15,6 +15,10 @@ export const metadata: Metadata = {
   },
   description:
     "Encuentra productos de hogar, educación, servicios, alimentos y accesorios en Todo Aquí.",
+
+  verification: {
+  google: "yR0LzAMNwCE7gDkPNVBjf7fUHVqoLUVYR1AGjFPfjh8",
+  },
   keywords: [
     "tienda virtual",
     "productos",
