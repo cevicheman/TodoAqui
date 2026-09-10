@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { Analytics } from '@vercel/analytics/next';
 import { ShoppingBag, Home, GraduationCap, Briefcase, Coffee, Watch } from "lucide-react"
 import Navbar from "@/components/Navbar"
 import SearchBar from "@/components/SearchBar"
@@ -240,6 +241,8 @@ export default function HomePage() {
           <AdminWhatsAppContact />
         </div>
       </footer>
+
+      <Analytics />
     </div>
   )
 }
