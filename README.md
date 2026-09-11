@@ -1,4 +1,4 @@
-# Ventas Renacer - Tienda Virtual con Imágenes
+# Todo Aquí - Tienda Virtual con Imágenes
 
 Una tienda virtual completa construida con Next.js, PostgreSQL (Neon) y autenticación JWT, que incluye subida de imágenes y eliminación automática de productos.
 
