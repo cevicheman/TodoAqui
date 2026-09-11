@@ -2,7 +2,7 @@ import { type NextRequest, NextResponse } from "next/server"
 import { sql, type Product } from "@/lib/database"
 import { verifyToken } from "@/lib/auth"
 
-export async function PUT(request: NextRequest, { params }: { params: { id: string } }) {
+export async function PUT(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
     const token = request.cookies.get("auth-token")?.value
     if (!token) {
@@ -14,7 +14,8 @@ export async function PUT(request: NextRequest, { params }: { params: { id: stri
       return NextResponse.json({ error: "Token inválido" }, { status: 401 })
     }
 
-    const productId = Number.parseInt(params.id)
+    const { id } = await params
+    const productId = Number.parseInt(id)
     const { nombre, descripcion, precio, unidades_disponibles, categoria, imagen_url } = await request.json()
 
     // Verificar que el producto existe y pertenece al usuario (o es admin)
@@ -57,7 +58,8 @@ export async function DELETE(request: NextRequest, { params }: { params: { id: s
       return NextResponse.json({ error: "Token inválido" }, { status: 401 })
     }
 
-    const productId = Number.parseInt(params.id)
+    const { id } = await params
+    const productId = Number.parseInt(id)
 
     // Verificar que el producto existe y pertenece al usuario (o es admin)
     const products = await sql`SELECT * FROM products WHERE id = ${productId}`

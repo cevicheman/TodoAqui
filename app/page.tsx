@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import ProductDetailModal from "@/components/ProductDetailModal"
 import { ShoppingBag, Home, GraduationCap, Briefcase, Coffee, Watch } from "lucide-react"
 import Navbar from "@/components/Navbar"
 import SearchBar from "@/components/SearchBar"
@@ -23,6 +24,7 @@ export default function HomePage() {
   const [searchQuery, setSearchQuery] = useState("")
   const [loading, setLoading] = useState(true)
   const [initialized, setInitialized] = useState(false)
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null)
 
   useEffect(() => {
     initializeApp()
@@ -171,7 +173,7 @@ export default function HomePage() {
               {filteredProducts.length > 0 ? (
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                   {filteredProducts.map((product) => (
-                    <ProductCard key={product.id} product={product} />
+                    <ProductCard key={product.id} product={product} onProductClick={setSelectedProduct} />
                   ))}
                 </div>
               ) : (
@@ -205,7 +207,7 @@ export default function HomePage() {
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                       {categoryProducts.map((product) => (
-                        <ProductCard key={product.id} product={product} />
+                        <ProductCard key={product.id} product={product} onProductClick={setSelectedProduct} />
                       ))}
                     </div>
 
@@ -238,6 +240,13 @@ export default function HomePage() {
           <p className="text-orange-700">Tu tienda virtual de confianza - Conectando vendedores y compradores</p>
         </div>
       </footer>
+      <ProductDetailModal
+        product={selectedProduct}
+        open={selectedProduct !== null}
+        onOpenChange={(open) => {
+          if (!open) setSelectedProduct(null)
+        }}
+      />
     </div>
   )
 }

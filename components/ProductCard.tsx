@@ -12,9 +12,16 @@ interface ProductCardProps {
   showActions?: boolean
   onEdit?: (product: Product) => void
   onDelete?: (id: number) => void
+  onProductClick?: (product: Product) => void
 }
 
-export default function ProductCard({ product, showActions = false, onEdit, onDelete }: ProductCardProps) {
+export default function ProductCard({
+  product,
+  showActions = false,
+  onEdit,
+  onDelete,
+  onProductClick,
+}: ProductCardProps) {
   const handleWhatsAppContact = () => {
     const message = encodeURIComponent(`Hola! Me interesa el producto: ${product.nombre} - $${product.precio}`)
     const whatsappUrl = `https://wa.me/${product.vendedor_whatsapp}?text=${message}`
@@ -28,7 +35,8 @@ export default function ProductCard({ product, showActions = false, onEdit, onDe
 
   return (
     <Card
-      className={`h-full flex flex-col bg-gradient-to-br from-white to-orange-50 border-orange-200 hover:shadow-lg transition-shadow duration-300 ${isOutOfStock ? "opacity-60" : ""}`}
+      onClick={() => onProductClick?.(product)}
+      className={`h-full flex flex-col bg-gradient-to-br from-white to-orange-50 border-orange-200 hover:shadow-lg transition-shadow duration-300 ${isOutOfStock ? "opacity-60" : ""} ${onProductClick ? "cursor-pointer" : ""}`}
     >
       <CardContent className="p-4 flex-grow">
         {/* Imagen del producto */}
@@ -90,7 +98,10 @@ export default function ProductCard({ product, showActions = false, onEdit, onDe
       <CardFooter className="p-4 pt-0 space-y-2">
         {!showActions && (
           <Button
-            onClick={handleWhatsAppContact}
+            onClick={(event) => {
+              event.stopPropagation()
+              handleWhatsAppContact()
+            }}
             className="w-full bg-green-500 hover:bg-green-600 text-white"
             disabled={isOutOfStock}
           >
@@ -102,7 +113,10 @@ export default function ProductCard({ product, showActions = false, onEdit, onDe
         {showActions && (
           <div className="flex space-x-2 w-full">
             <Button
-              onClick={() => onEdit?.(product)}
+              onClick={(event) => {
+                event.stopPropagation()
+                onEdit?.(product)
+              }}
               variant="outline"
               size="sm"
               className="flex-1 border-orange-300 text-orange-700 hover:bg-orange-50"
@@ -110,7 +124,10 @@ export default function ProductCard({ product, showActions = false, onEdit, onDe
               Editar
             </Button>
             <Button
-              onClick={() => onDelete?.(product.id)}
+              onClick={(event) => {
+                event.stopPropagation()
+                onDelete?.(product.id)
+              }}
               variant="outline"
               size="sm"
               className="flex-1 border-red-300 text-red-700 hover:bg-red-50"
