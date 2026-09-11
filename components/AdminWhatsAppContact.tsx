@@ -8,7 +8,7 @@ export default function AdminWhatsAppContact() {
   const pathname = usePathname()
   const currentPage = pathname === "/" ? "inicio" : pathname
   const message = encodeURIComponent(
-    `Hola, deseo comunicarme con el administrador de TodoAqui sobre la página: ${currentPage}. Vengo de Todo Aquí.`,
+    `Hola, deseo comunicarme con el administrador de Ventas Renacer sobre la página: ${currentPage}. Vengo de Ventas Renacer.`,
   )
   const whatsappUrl = `https://wa.me/593968117731?text=${message}`
 

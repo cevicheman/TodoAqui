@@ -11,11 +11,11 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://todoaqui.vercel.app
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Todo Aquí - Tu Tienda Virtual de Confianza",
-    template: "%s | Todo Aquí",
+    default: "Ventas Renacer - Tu Tienda Virtual de Confianza",
+    template: "%s | Ventas Renacer",
   },
   description:
-    "Encuentra productos de hogar, educación, servicios, alimentos y accesorios en Todo Aquí.",
+    "Encuentra productos de hogar, educación, servicios, alimentos y accesorios en Ventas Renacer.",
 
   verification: {
   google: "yR0LzAMNwCE7gDkPNVBjf7fUHVqoLUVYR1AGjFPfjh8",
@@ -44,25 +44,25 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "es_EC",
-    siteName: "Todo Aquí",
-    title: "Todo Aquí - Tu Tienda Virtual de Confianza",
+    siteName: "Ventas Renacer",
+    title: "Ventas Renacer - Tu Tienda Virtual de Confianza",
     description:
-      "Encuentra productos de hogar, educación, servicios, alimentos y accesorios en Todo Aquí.",
+      "Encuentra productos de hogar, educación, servicios, alimentos y accesorios en Ventas Renacer.",
     url: "/",
     images: [
       {
         url: "/placeholder-logo.png",
         width: 512,
         height: 512,
-        alt: "Todo Aquí",
+        alt: "Ventas Renacer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Todo Aquí - Tu Tienda Virtual de Confianza",
+    title: "Ventas Renacer - Tu Tienda Virtual de Confianza",
     description:
-      "Encuentra productos de hogar, educación, servicios, alimentos y accesorios en Todo Aquí.",
+      "Encuentra productos de hogar, educación, servicios, alimentos y accesorios en Ventas Renacer.",
     images: ["/placeholder-logo.png"],
   },
   icons: {
@@ -91,7 +91,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "OnlineStore",
-              name: "Todo Aquí",
+              name: "Ventas Renacer",
               description:
                 "Tienda virtual de productos de hogar, educación, servicios, alimentos y accesorios.",
               url: siteUrl,

@@ -1,4 +1,4 @@
-# Inventario de dependencias npm del proyecto Todo Aqui.
+# Inventario de dependencias npm del proyecto Ventas Renacer.
 # La instalacion se realiza con: pnpm install
 
 # Dependencias de ejecucion

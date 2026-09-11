@@ -54,12 +54,12 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 to-peach-50 flex items-center justify-center p-4">
       <div className="w-full max-w-md">
-        <h1 className="sr-only">Iniciar sesión en Todo Aquí</h1>
+        <h1 className="sr-only">Iniciar sesión en Ventas Renacer</h1>
         {/* Logo */}
         <div className="text-center mb-8">
           <Link href="/" className="inline-flex items-center space-x-2">
             <ShoppingBag className="w-10 h-10 text-orange-500" />
-            <span className="text-3xl font-bold text-orange-900">Todo Aquí</span>
+            <span className="text-3xl font-bold text-orange-900">Ventas Renacer</span>
           </Link>
         </div>
 
