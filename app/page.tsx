@@ -1,12 +1,10 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Analytics } from '@vercel/analytics/next';
 import { ShoppingBag, Home, GraduationCap, Briefcase, Coffee, Watch } from "lucide-react"
 import Navbar from "@/components/Navbar"
 import SearchBar from "@/components/SearchBar"
 import ProductCard from "@/components/ProductCard"
-import AdminWhatsAppContact from "@/components/AdminWhatsAppContact"
 import { Button } from "@/components/ui/button"
 import type { Product } from "@/lib/database"
 
@@ -104,7 +102,7 @@ export default function HomePage() {
         <div className="flex justify-center items-center h-96">
           <div className="text-center">
             <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-orange-500 mx-auto mb-4"></div>
-            <p className="text-orange-700">Inicializando Ventas Renacer...</p>
+            <p className="text-orange-700">Inicializando Todo Aquí...</p>
           </div>
         </div>
       </div>
@@ -120,7 +118,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex justify-center items-center mb-6">
             <ShoppingBag className="w-16 h-16 text-orange-500 mr-4" />
-            <h1 className="text-4xl md:text-6xl font-bold text-orange-900">Ventas Renacer</h1>
+            <h1 className="text-4xl md:text-6xl font-bold text-orange-900">Todo Aquí</h1>
           </div>
           <p className="text-xl text-orange-700 mb-8 max-w-2xl mx-auto">
             Tu tienda virtual de confianza. Encuentra todo lo que necesitas en un solo lugar.
@@ -235,14 +233,11 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex justify-center items-center mb-4">
             <ShoppingBag className="w-8 h-8 text-orange-500 mr-2" />
-            <span className="text-xl font-bold text-orange-900">Ventas Renacer</span>
+            <span className="text-xl font-bold text-orange-900">Todo Aquí</span>
           </div>
           <p className="text-orange-700">Tu tienda virtual de confianza - Conectando vendedores y compradores</p>
-          <AdminWhatsAppContact />
         </div>
       </footer>
-
-      <Analytics />
     </div>
   )
 }
