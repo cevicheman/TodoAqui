@@ -48,9 +48,9 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-to-br from-orange-400 to-orange-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">TA</span>
+              <span className="text-white font-bold text-sm">VR</span>
             </div>
-            <span className="text-2xl font-bold text-orange-800">Todo Aquí</span>
+            <span className="text-2xl font-bold text-orange-800">Ventas Renacer</span>
           </Link>
 
           {/* Desktop Menu */}

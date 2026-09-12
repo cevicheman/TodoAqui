@@ -6,7 +6,7 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Todo Aquí - Tu Tienda Virtual de Confianza",
+  title: "Ventas Renacer - Tu Tienda Virtual de Confianza",
   description:
     "Encuentra todo lo que necesitas en un solo lugar. Productos de hogar, educación, servicios, alimentos y accesorios.",
   keywords: "tienda virtual, productos, hogar, educación, servicios, alimentos, accesorios, Ecuador",

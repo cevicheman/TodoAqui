@@ -1,4 +1,4 @@
-# Todo Aquí - Tienda Virtual con Imágenes
+# Ventas Renacer - Tienda Virtual con Imágenes
 
 Una tienda virtual completa construida con Next.js, PostgreSQL (Neon) y autenticación JWT, que incluye subida de imágenes y eliminación automática de productos.
 
@@ -27,7 +27,7 @@ Una tienda virtual completa construida con Next.js, PostgreSQL (Neon) y autentic
 
 Tu tienda estará disponible en tu URL de Vercel. La base de datos se inicializa automáticamente con:
 
-- ✅ Usuario administrador: `admin@todoaqui.com` / `password`
+- ✅ Usuario administrador existente: `admin@todoaqui.com` / `password`
 - ✅ 20 productos de ejemplo en todas las categorías
 - ✅ Todas las tablas y relaciones configuradas
 
@@ -60,7 +60,7 @@ npm run dev
 
 ## 📝 Credenciales de Prueba
 
-**Administrador:**
+**Administrador existente:**
 - Email: `admin@todoaqui.com`
 - Contraseña: `password`
 

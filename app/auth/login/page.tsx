@@ -58,7 +58,7 @@ export default function LoginPage() {
         <div className="text-center mb-8">
           <Link href="/" className="inline-flex items-center space-x-2">
             <ShoppingBag className="w-10 h-10 text-orange-500" />
-            <span className="text-3xl font-bold text-orange-900">Todo Aquí</span>
+            <span className="text-3xl font-bold text-orange-900">Ventas Renacer</span>
           </Link>
         </div>
 
